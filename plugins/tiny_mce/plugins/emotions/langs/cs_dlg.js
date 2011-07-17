@@ -1,0 +1,20 @@
+tinyMCE.addI18n('cs.emotions_dlg',{
+title:"Vložit emotikon",
+desc:"Emotikony",
+cool:"Pohodový",
+cry:"Plačící",
+embarassed:"Rozpačitý",
+foot_in_mouth:"Vím já, co to je za xicht?",
+frown:"Zamračený",
+innocent:"Nevinný",
+kiss:"Líbající",
+laughing:"Smějící se",
+money_mouth:"Peníze vidící",
+sealed:"Mlčící",
+smile:"Usmívající se",
+surprised:"Překvapený",
+tongue_out:"Vyplazující jazyk",
+undecided:"Rozhodující se",
+wink:"Mrkající",
+yell:"Řvoucí"
+});
