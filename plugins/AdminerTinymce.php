@@ -42,8 +42,31 @@ tinyMCE.init({
 	width: '800',
 	height: '360', 
 	language: 'cs', 	
-  language: '<?php echo $lang; ?>'
+  language: '<?php echo $lang; ?>',
+  file_browser_callback : "filebrowser"
 });
+
+function filebrowser(field_name, url, type, win) {
+    url = document.location.href.split('/').slice(0, -1).join('/')+'/';
+    path = url.replace(/^(http|https):\/\/[^\/]+(\/.*)$/, '$2');
+    
+    fileBrowserURL = path + "plugins/pdw_file_browser/index.php?editor=tinymce&filter=" + type;
+      
+    tinyMCE.activeEditor.windowManager.open(
+        {   
+            title: "PDW File Browser",
+            url: fileBrowserURL,
+            width: 950,
+            height: 650,
+            inline: 0,
+            maximizable: 1,
+            close_previous: 0
+        }, { 
+            window : win,
+            input : field_name
+        }
+    );    
+}
 </script>
 <?php
 	}
