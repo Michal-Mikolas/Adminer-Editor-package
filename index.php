@@ -15,6 +15,7 @@ function adminer_object() {
         new AdminerSlugify,
         new AdminerEditCalendar,
         new AdminerFileUpload,
+        new AdminerEnumOption,
     );
     
     
