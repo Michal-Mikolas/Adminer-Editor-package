@@ -27,7 +27,7 @@ function adminer_object() {
         public function database() 
         {
             // database name, will be escaped by Adminer
-            return 'webtrh_databaze';
+            return 'database_name';
         }
         
         /** vlastní přihlašování */

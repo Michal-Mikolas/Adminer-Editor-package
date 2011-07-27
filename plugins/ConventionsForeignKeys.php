@@ -12,7 +12,7 @@ class ConventionForeignKeys
     {
         $ret = array();
         foreach(fields($table) as $field => $args){
-          if(ereg("^(.*)_id$", $field, $args)){
+          if(preg_match("#^(?!parent)(.*)_id$#", $field, $args)){
             $ret[] = array("table" => $this->plural($args[1]), "source" => array($field), "target" => array("id"));
           }
         }
