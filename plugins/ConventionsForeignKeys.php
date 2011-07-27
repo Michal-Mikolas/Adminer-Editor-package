@@ -15,7 +15,10 @@ class ConventionForeignKeys
             if($field == 'parent_id'){
                 $ret[] = array("table" => $table, "source" => array($field), "target" => array("id"));
             }elseif(preg_match("#^(.*)_id$#", $field, $args)){
-                $ret[] = array("table" => $this->plural($args[1]), "source" => array($field), "target" => array("id"));
+                $tableName = $this->plural($args[1]);
+                if(in_array($tableName, get_vals("SHOW TABLES")/*tables_list()*/)){  //foreign keys only for existing tables
+                    $ret[] = array("table" => $tableName, "source" => array($field), "target" => array("id"));
+                }
             }
         }
         return $ret;
