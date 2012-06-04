@@ -10,7 +10,6 @@ function adminer_object() {
     
     $plugins = array(
         // specify enabled plugins here
-        new ConventionForeignKeys,
     );
     
     return new AdminerPlugin($plugins);

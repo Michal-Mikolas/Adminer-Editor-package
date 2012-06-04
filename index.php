@@ -11,7 +11,6 @@ function adminer_object() {
     $plugins = array(
         // specify enabled plugins here
         new AdminerTinymce,
-        new ConventionForeignKeys,
         new AdminerSlugify,
         new AdminerEditCalendar,
         new AdminerFileUpload,
